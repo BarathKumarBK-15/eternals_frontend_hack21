@@ -1,3 +1,40 @@
 * {
 	font-family: 'Poppins';
 }
+
+/* Header */
+
+/* Container */
+
+header .container-fluid {
+	padding: 0 !important;
+}
+
+/* Navigation Bar */
+
+.navbar {
+	background-color: #007BFF !important;
+}
+
+.navbar-brand , .nav-link {
+	color: #BFDEFF !important;
+}
+
+.navbar-brand:hover , .nav-link:hover {
+	color: white !important;
+}
+
+.active {
+	font-weight: 600 !important;
+	color: white !important;
+}
+
+/* Media Queries */
+
+@media (max-width: 990px) {
+
+	.nav-item:nth-of-type(3) {
+		padding-left: 16px !important;
+	}
+
+}
