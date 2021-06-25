@@ -39,10 +39,11 @@ header .container-fluid {
 
 }
 
-.landingdiv {
+.landingdivi, .landingdivtext {
 	background-color: white !important;
 	border-radius: 10px;
 	display: inline-block;
+	color: #007BFF !important;
 	width: 23%;
 	align-content: center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -50,8 +51,8 @@ header .container-fluid {
 }
 
 .landingimg {
-	margin: 3%;
 	width: 94%;
+	margin: 3%;
 }
 
 .landingbutton {
@@ -59,7 +60,31 @@ header .container-fluid {
 	text-align: center;
 	background-color: #007BFF !important;
 	color: white !important;
-	margin: 1% 3% 3% 3%;
 	width: 94%;
 	height: 50px;
+	margin: 1% 3% 3% 4%;
+}
+
+.landingdivtext {
+	width: 50%;
+	padding: 1%;
+}
+
+.lh {
+	margin: 5px;
+}
+
+.lp {
+	margin: 5px;
+	margin-top: 10px;
+	color: black;
+}
+
+.li {
+	color: #007BFF !important;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	text-align: right;
+	margin-right: 5%;
 }
