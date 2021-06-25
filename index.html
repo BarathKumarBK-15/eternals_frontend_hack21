@@ -16,6 +16,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
 	<!-- CSS -->
 	<link rel="stylesheet" href="styles.css">
 
@@ -67,28 +70,52 @@
 	</header>
 
 	<main>
-		<div class="landingdivi">
-			<img class="landingimg" src="Assets/Landing/a1.png"/>
-			<button class="landingbutton">KICK OFF</button>
-		</div>
-		<div  class="landingdivtext">
-			<h3 class="lh">Football</h3>
-			<p class="lp"> It doesn't matter whether you call it Football or Soccer, here are some cool accessories for those who play with 100% precision and passion.</p>
-			<a class="li">Take part in the Soccer Evolution!</a>
-		</div>
-		<div  class="landingdivtext">
-			<h3 class="lh">Cricket</h3>
-			<p class="lp">To all the fans and players from Oz to England, get yourselves equipped with the best accessories and kits.</p>
-			<a class="li">On your way towards Cricket Mania!</a>
-		</div>
-		<div class="landingdivi">
-			<img class="landingimg" src="Assets/Landing/a2.png"/>
-			<button class="landingbutton">LET'S PLAY</button>
+		<!-- Main Content -->
+		<div class="container-lg">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="sport-card">
+						<img src="Assets/Landing/a1.png" alt="football-img" class="img-fluid">
+						<button class="btn btn-sport-card col-12">KICK OFF</button>
+					</div>
+				</div>
+				<div class="col-md-1 offset"></div>
+				<div class="col-md-7">
+					<div class="sport-intro-card">
+						<h1 class="sport-name">Football</h1>
+						<h3 class="sport-desc">It doesn't matter whether you call it Football or Soccer, here are some cool accessories for those who play with 100% precision and passion.</h3>
+						<h5 class="sport-quote">Take part in the Soccer Evolution!</h5>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-7">
+					<div class="sport-intro-card">
+						<h1 class="sport-name">Cricket</h1>
+						<h3 class="sport-desc">To all the fans and players from Oz to England, get yourselves equipped with the best accessories and kits.</h3>
+						<h5 class="sport-quote">On your way towards Cricket Mania!</h5>
+					</div>
+				</div>
+				<div class="col-md-1 offset"></div>
+				<div class="col-md-4">
+					<div class="sport-card">
+						<img src="Assets/Landing/a2.png" alt="cricket-img" class="img-fluid">
+						<button class="btn btn-sport-card col-12">LET'S PLAY</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
 	
 	<footer>
-		
+		<!-- Social Icons -->
+		<div class="social-icons">
+			<i class="fa-2x fab fa-facebook-f"></i>
+			<i class="fa-2x fab fa-twitter"></i>
+			<i class="fa-2x fab fa-instagram"></i>
+			<i class="fa-2x fas fa-envelope"></i> 
+		</div>
+		<p>&copy; Copyright 2021 <span>SportsQuip</span></p>
 	</footer>
 
 	<!-- JS Scripts -->

@@ -3,6 +3,7 @@
 }
 
 /* Header */
+/* ---------------------------------------------------- */
 
 /* Container */
 
@@ -29,7 +30,121 @@ header .container-fluid {
 	color: white !important;
 }
 
+/* Main */
+/* ---------------------------------------------------- */
+
+/* Container */
+main .container {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+/* Row */
+.row {
+	margin: 100px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Card */
+.sport-card {
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 1px 2px 5px grey;
+}
+
+/* Images */
+main img {
+	border-radius: 5px;
+}
+
+/* Buttons */
+.btn-sport-card {
+	background-color: white;
+	color: #007BFF;
+	font-size: 1.3rem;
+	padding: 13px 10px ;
+	border-radius: 5px;
+	margin-top: 20px;
+	border: 2px solid #007BFF;
+	transition: ease-in 0.4s;
+}
+
+.btn-sport-card:hover {
+	background-color: #007BFF;
+	cursor: pointer;
+	color: white;
+	transition: ease-out 0.4s;
+}
+
+/* Intro Card */
+.sport-intro-card {
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 1px 2px 5px grey;
+}
+
+/* Texts */
+.sport-name {
+	color: #007BFF;
+	font-size: 1.8rem;
+	line-height: 2;
+}
+
+.sport-desc {
+	font-size: 1rem;
+	line-height: 1.8;
+	font-weight: 500;
+}
+
+.sport-quote {
+	color: #007BFF;
+	margin-top: 20px;
+	font-size: 1.1rem;
+	font-weight: 400;
+	text-align: right;
+}
+
+/* Footer */
+/* ---------------------------------------------------- */
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 20px;
+}
+
+footer .social-icons {
+	padding: 10px;
+	text-align: center;
+}
+
+footer .fa-2x {
+	padding: 10px;
+	transition: 0.5s;
+}
+
+footer .fa-2x:hover {
+	color: #007BFF;
+	transition: 0.5s;
+}
+
+footer p {
+	margin: 20px 0;
+	font-size: 1.3rem;
+}
+
+footer span {
+	margin-left: 8px;
+	color: #007BFF;
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
 /* Media Queries */
+/* ---------------------------------------------------- */
 
 @media (max-width: 990px) {
 
@@ -37,54 +152,79 @@ header .container-fluid {
 		padding-left: 16px !important;
 	}
 
+	main .offset {
+		width: 0;
+	}
+
 }
 
-.landingdivi, .landingdivtext {
-	background-color: white !important;
-	border-radius: 10px;
-	display: inline-block;
-	color: #007BFF !important;
-	width: 23%;
-	align-content: center;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin-top: 25px;
-	margin-left: 10%;
+@media (max-width: 767px) {
+
+	main .sport-card , main .sport-intro-card {
+		width: 65vw !important;
+	}
+
+	main .row {
+		margin: 40px;
+	}
+
+	main .col-md-4 , main .col-md-7 {
+		display: flex;
+		margin-bottom: 30px;
+		justify-content: center;
+	}
+
+	main .row:nth-of-type(2) {
+		flex-direction: column-reverse;
+	}
+
 }
 
-.landingimg {
-	width: 94%;
-	margin: 3%;
+@media (max-width:  575px) {
+
+	main .row {
+		margin: 40px 0;
+	}
+
+	main .sport-card , main .sport-intro-card {
+		width: 90vw !important;
+	}
+
+	footer .social-icons {
+		padding: 5px;
+	}
+
+	footer p { 
+		margin: 10px 0;
+		font-size: 1rem;
+	} 
+
+	footer span {
+		font-size: 1.2rem;
+	}
+
+	.fa-2x {
+		font-size: 1.8rem;
+	}
+
 }
 
-.landingbutton {
-	border: none;
-	text-align: center;
-	background-color: #007BFF !important;
-	color: white !important;
-	width: 94%;
-	height: 50px;
-	margin: 1% 3% 3% 4%;
-}
+@media (max-width:  300px) {
 
-.landingdivtext {
-	width: 47%;
-	padding: 1%;
-}
+	footer .social-icons {
+		padding: 0;
+	}
 
-.lh {
-	margin: 5px;
-}
+	footer p { 
+		font-size: 0.8rem;
+	} 
 
-.lp {
-	margin: 5px;
-	margin-top: 10px;
-	color: black;
-}
+	footer span {
+		font-size: 1rem;
+	}
 
-.li {
-	text-decoration: none;
-	display: inline-block;
-	width: 100%;
-	text-align: right;
-	margin-right: 5%;
+	.fa-2x {
+		font-size: 1.5rem;
+	}
+
 }
