@@ -14,6 +14,7 @@ header .container-fluid {
 /* Navigation Bar */
 
 .navbar {
+	z-index: 2;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -36,13 +37,37 @@ header .container-fluid {
 /* Main */
 /* ---------------------------------------------------- */
 
-/* Landing Page */
-main .landing-page {
-	height: 100vh;
-	border-radius: 0 0 20px 20px;
-	background-color: #007BFF;
+/* Toggle Switch */
+
+#toggle-switch {
+	display: flex;
+	justify-content: flex-end;
 }
 
+.form-check {
+	font-size: 25px;
+}
+
+/* Landing Page */
+main .landing-page {
+	padding: 50px 0;
+	height: 105vh;
+	width: 100vw;
+	border-radius: 0 0 20px 20px;
+	opacity: 75%;
+	background-image: url(https://assets.khelnow.com/news/uploads/2019/10/Bundesliga_Joshua_Kimmich_201910.jpg);
+	background-repeat: no-repeat;
+	background-position: 22% 0;
+	background-size: cover;
+}
+
+main .title {
+	font-size: 4rem;
+	line-height: 1.8;
+	color: white;
+	font-weight: 800;
+	text-align: right;
+}
 
 /* Container */
 main .container {
@@ -51,7 +76,7 @@ main .container {
 }
 
 /* Row */
-.row {
+main .container-lg .row {
 	margin: 100px 0;
 	display: flex;
 	align-items: center;
@@ -167,6 +192,10 @@ footer span {
 		width: 0;
 	}
 
+	.landing-page .title {
+		text-align: center;
+	}
+
 }
 
 @media (max-width: 767px) {
@@ -188,6 +217,10 @@ footer span {
 	main .row:nth-of-type(1) {
 		flex-direction: column-reverse;
 		margin-top: 75px;
+	}
+
+	.landing-page .title {
+		font-size: 3.5rem;
 	}
 
 }
@@ -217,6 +250,10 @@ footer span {
 
 	.fa-2x {
 		font-size: 1.8rem;
+	}
+
+	.landing-page .title {
+		font-size: 2.5rem;
 	}
 
 }
