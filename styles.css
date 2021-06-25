@@ -14,6 +14,9 @@ header .container-fluid {
 /* Navigation Bar */
 
 .navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
 	background-color: #007BFF !important;
 }
 
@@ -32,6 +35,14 @@ header .container-fluid {
 
 /* Main */
 /* ---------------------------------------------------- */
+
+/* Landing Page */
+main .landing-page {
+	height: 100vh;
+	border-radius: 0 0 20px 20px;
+	background-color: #007BFF;
+}
+
 
 /* Container */
 main .container {
@@ -176,6 +187,7 @@ footer span {
 
 	main .row:nth-of-type(1) {
 		flex-direction: column-reverse;
+		margin-top: 75px;
 	}
 
 }
