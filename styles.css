@@ -47,7 +47,8 @@ header .container-fluid {
 	width: 23%;
 	align-content: center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin: 5vh;
+	margin-top: 25px;
+	margin-left: 10%;
 }
 
 .landingimg {
@@ -66,7 +67,7 @@ header .container-fluid {
 }
 
 .landingdivtext {
-	width: 50%;
+	width: 47%;
 	padding: 1%;
 }
 
@@ -81,7 +82,6 @@ header .container-fluid {
 }
 
 .li {
-	color: #007BFF !important;
 	text-decoration: none;
 	display: inline-block;
 	width: 100%;
