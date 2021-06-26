@@ -46,7 +46,7 @@ main .container {
 .row {
 	margin-bottom: 45px;
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	justify-content: center;
 }
 
@@ -55,20 +55,57 @@ main img {
 	border-radius: 5px;
 }
 
+.img-background {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 50px 40px;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Buttons */
-.btn-sport-card {
+
+.btns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn-product-card-outline {
 	background-color: white;
 	color: #007BFF;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	padding: 13px 10px ;
 	border-radius: 5px;
 	margin-top: 20px;
 	border: 2px solid #007BFF;
+	width: 48%;
 	transition: ease-in 0.4s;
 }
 
-.btn-sport-card:hover {
+.btn-product-card-outline:hover {
 	background-color: #007BFF;
+	cursor: pointer;
+	color: white;
+	transition: ease-out 0.4s;
+}
+
+.btn-product-card {
+	background-color:  #007BFF;
+	color: white;
+	border: 2px solid #007BFF;
+	font-size: 1.2rem;
+	padding: 13px 10px;
+	border-radius: 5px;
+	width: 48%;
+	margin-top: 20px;
+	transition: ease-in 0.4s;
+}
+
+.btn-product-card:hover {
+	background-color: #0065d1;
+	border: 2px solid #0065d1;
 	cursor: pointer;
 	color: white;
 	transition: ease-out 0.4s;
@@ -76,45 +113,42 @@ main img {
 
 /* Intro Card */
 .product-card {
-	padding: 8px;
-	border-radius: 8px;
+	margin-bottom: 50px;
+	padding: 15px;
+	border-radius: 5px;
 	box-shadow: 1px 2px 5px grey;
 }
 
-.productname{
+.product {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* Texts */
+.product-name {
+	color: #007BFF;
+	font-size: 1.5rem;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	line-height: 2;
+}
+
+.product-desc {
+	font-size: 1.1rem;
+	line-height: 1.8;
+	margin-bottom: 10px;
+}
+
+main .title {
+    margin: 100px 0 70px;
     color: #007BFF;
-    font-size: 1.5rem;
-    margin: 5px;
 }
 
-.imgbackground {
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    padding: 10px;
-}
-
-.product-button {
-    width: 45%;
-    margin: 2%;
-    margin-top: 5px;
-    padding: 5px;
-}
-
-.product-button:nth-child(even) {
-    background-color: white;
-    border-color: #007BFF;
-    color: #007bff;
-}
-
-.product-button:nth-child(odd) {
-    background-color: #007BFF;
-    color: #f4f4f4;
-    border: none;
-}
-
-main h1 {
-    margin: 10vh 1vw 2vh 1vw;
-    color: #007BFF;
+/* Heart Icon */
+.fa-heart {
+	font-size: 2.5rem;
+	color: red;
 }
 
 /* Footer */
@@ -163,17 +197,13 @@ footer span {
 		padding-left: 16px !important;
 	}
 
-	main .offset {
-		width: 0;
+	main .title {
+		text-align: center;
 	}
 
 }
 
 @media (max-width: 767px) {
-
-	main .sport-card , main .sport-intro-card {
-		width: 65vw !important;
-	}
 
 	main .row {
 		margin: 40px;
@@ -184,22 +214,12 @@ footer span {
 		margin-bottom: 30px;
 		justify-content: center;
 	}
-
-	main .row:nth-of-type(1) {
-		flex-direction: column-reverse;
-		margin-top: 75px;
-	}
-
 }
 
 @media (max-width:  575px) {
 
 	main .row {
 		margin: 40px 0;
-	}
-
-	main .sport-card , main .sport-intro-card {
-		width: 90vw !important;
 	}
 
 	footer .social-icons {
@@ -217,6 +237,28 @@ footer span {
 
 	.fa-2x {
 		font-size: 1.8rem;
+	}
+
+	.img-background {
+		min-height: 250px;
+	}
+
+}
+
+@media (max-width: 350px) {
+
+	.btns {
+		flex-direction: column;
+	}
+
+	.btn-product-card {
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.btn-product-card-outline {
+		width: 100%;
 	}
 
 }
