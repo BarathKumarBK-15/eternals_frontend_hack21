@@ -14,7 +14,7 @@ header .container-fluid {
 /* Navigation Bar */
 
 .navbar {
-	z-index: 2;
+	z-index: 3;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -45,28 +45,56 @@ header .container-fluid {
 }
 
 .form-check {
+	z-index: 2;
 	font-size: 25px;
 }
 
 /* Landing Page */
 main .landing-page {
 	padding: 50px 0;
+	position: relative;
 	height: 105vh;
 	width: 100vw;
 	border-radius: 0 0 20px 20px;
-	opacity: 75%;
 	background-image: url(https://assets.khelnow.com/news/uploads/2019/10/Bundesliga_Joshua_Kimmich_201910.jpg);
 	background-repeat: no-repeat;
-	background-position: 22% 0;
+	background-position: 22% 70%;
 	background-size: cover;
 }
 
+main .landing-page::before {
+	border-radius: 0 0 20px 20px;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: black;
+	opacity: 0.6;
+}
+
+/* Landing Page Title */
+
 main .title {
+	z-index: 2;
 	font-size: 4rem;
 	line-height: 1.8;
 	color: white;
 	font-weight: 800;
 	text-align: right;
+	width: 50%;
+	padding-bottom: 50px;
+}
+
+/* Landing Page Containers */
+.landing-page .container-md {
+	height: 100%;
+}
+
+.landing-page .container {
+	margin-top: 30px;
+	margin-bottom: 0;
 }
 
 /* Container */
@@ -194,6 +222,7 @@ footer span {
 
 	.landing-page .title {
 		text-align: center;
+		width: 100%;
 	}
 
 }
