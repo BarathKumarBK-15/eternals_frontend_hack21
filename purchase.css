@@ -1,0 +1,265 @@
+* {
+	font-family: 'Poppins';
+}
+
+/* Header */
+/* ---------------------------------------------------- */
+
+/* Container */
+
+header .container-fluid {
+	padding: 0 !important;
+}
+
+/* Navigation Bar */
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #007BFF !important;
+}
+
+.navbar-brand , .nav-link {
+	color: #BFDEFF !important;
+}
+
+.navbar-brand:hover , .nav-link:hover {
+	color: white !important;
+}
+
+.active {
+	font-weight: 600 !important;
+	color: white !important;
+}
+
+/* Main */
+/* ---------------------------------------------------- */
+
+/* Container */
+main .container {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+/* Row */
+.row {
+	margin-bottom: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Images */
+main img {
+	border-radius: 5px;
+}
+
+/* Buttons */
+.btn-sport-card {
+	background-color: white;
+	color: #007BFF;
+	font-size: 1.3rem;
+	padding: 13px 10px ;
+	border-radius: 5px;
+	margin-top: 20px;
+	border: 2px solid #007BFF;
+	transition: ease-in 0.4s;
+}
+
+.btn-sport-card:hover {
+	background-color: #007BFF;
+	cursor: pointer;
+	color: white;
+	transition: ease-out 0.4s;
+}
+
+/* Intro Card */
+.purchase-card {
+	padding: 8px;
+	border-radius: 8px;
+	box-shadow: 1px 2px 5px grey;
+}
+
+.productname{
+    color: #007BFF;
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
+.imgbackground {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.product-button {
+    width: 45%;
+    margin: 2%;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.product-button:nth-child(even) {
+    background-color: white;
+    border-color: #007BFF;
+    color: #007bff;
+}
+
+.product-button:nth-child(odd) {
+    background-color: #007BFF;
+    color: #f4f4f4;
+    border: none;
+}
+
+main h1 {
+    margin: 10vh 1vw 2vh 1vw;
+    color: #007BFF;
+}
+
+#main-img-col {
+    width: 78%;
+    display: inline-block;
+}
+
+#second-img-col {
+    width: 20%;
+    display: inline-block;
+}
+
+.sub-main-img {
+    margin: 1%;
+    display: inline-block;
+    width: 48%;
+    margin-right: 0;
+}
+
+.sub-second-img {
+    margin: 1%;
+    display: block;
+    width: 97%;
+}
+
+/* Footer */
+/* ---------------------------------------------------- */
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 20px;
+}
+
+footer .social-icons {
+	padding: 10px;
+	text-align: center;
+}
+
+footer .fa-2x {
+	padding: 10px;
+	transition: 0.5s;
+}
+
+footer .fa-2x:hover {
+	color: #007BFF;
+	transition: 0.5s;
+}
+
+footer p {
+	margin: 20px 0;
+	font-size: 1.3rem;
+}
+
+footer span {
+	margin-left: 8px;
+	color: #007BFF;
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
+/* Media Queries */
+/* ---------------------------------------------------- */
+
+@media (max-width: 990px) {
+
+	.nav-item:nth-of-type(3) {
+		padding-left: 16px !important;
+	}
+
+	main .offset {
+		width: 0;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	main .sport-card , main .sport-intro-card {
+		width: 65vw !important;
+	}
+
+	main .row {
+		margin: 40px;
+	}
+
+	main .col-md-4 , main .col-md-7 {
+		display: flex;
+		margin-bottom: 30px;
+		justify-content: center;
+	}
+
+	main .row:nth-of-type(1) {
+		flex-direction: column-reverse;
+		margin-top: 75px;
+	}
+
+}
+
+@media (max-width:  575px) {
+
+	main .row {
+		margin: 40px 0;
+	}
+
+	main .sport-card , main .sport-intro-card {
+		width: 90vw !important;
+	}
+
+	footer .social-icons {
+		padding: 5px;
+	}
+
+	footer p { 
+		margin: 10px 0;
+		font-size: 1rem;
+	} 
+
+	footer span {
+		font-size: 1.2rem;
+	}
+
+	.fa-2x {
+		font-size: 1.8rem;
+	}
+
+}
+
+@media (max-width:  300px) {
+
+	footer .social-icons {
+		padding: 0;
+	}
+
+	footer p { 
+		font-size: 0.8rem;
+	} 
+
+	footer span {
+		font-size: 1rem;
+	}
+
+	.fa-2x {
+		font-size: 1.5rem;
+	}
+
+}
