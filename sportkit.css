@@ -68,7 +68,7 @@ main img {
 	justify-content: space-between;
 }
 
-.btn-product-card-outline {
+.btn-kit-card-outline {
 	background-color: white;
 	color: #007BFF;
 	font-size: 1.2rem;
@@ -76,18 +76,18 @@ main img {
 	border-radius: 5px;
 	margin-top: 20px;
 	border: 2px solid #007BFF;
-	width: 48%;
+	width: 98%;
 	transition: ease-in 0.4s;
 }
 
-.btn-product-card-outline:hover {
+.btn-kit-card-outline:hover {
 	background-color: #007BFF;
 	cursor: pointer;
 	color: white;
 	transition: ease-out 0.4s;
 }
 
-.btn-product-card {
+.btn-kit-card {
 	background-color:  #007BFF;
 	color: white;
 	border: 2px solid #007BFF;
@@ -99,7 +99,7 @@ main img {
 	transition: ease-in 0.4s;
 }
 
-.btn-product-card:hover {
+.btn-kit-card:hover {
 	background-color: #0065d1;
 	border: 2px solid #0065d1;
 	cursor: pointer;
@@ -109,14 +109,14 @@ main img {
 
 /* Intro Card */
 
-.product-card {
+.kit-card {
 	margin-bottom: 50px;
 	padding: 15px;
 	border-radius: 5px;
 	box-shadow: 1px 2px 5px grey;
 }
 
-.product {
+.kit {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -124,7 +124,7 @@ main img {
 
 /* Texts */
 
-.product-name {
+.kit-name {
 	color: #007BFF;
 	font-size: 1.5rem;
 	margin-top: 15px;
@@ -132,7 +132,7 @@ main img {
 	line-height: 2;
 }
 
-.product-desc {
+.kit-desc {
 	font-size: 1.1rem;
 	line-height: 1.8;
 	margin-bottom: 10px;
@@ -250,13 +250,13 @@ footer span {
 		flex-direction: column;
 	}
 
-	.btn-product-card {
+	.btn-kit-card {
 		width: 100%;
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
 
-	.btn-product-card-outline {
+	.btn-kit-card-outline {
 		width: 100%;
 	}
 
