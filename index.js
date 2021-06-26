@@ -23,7 +23,9 @@ function sportKitPage() {
 	} 
 }
 
-
+var swaps=[0,0,0,0,0,0]
+let new_src = "Assets/football_jerseys/"
+let locs=["RMFC/","MANU/","PSG/","FRA/","GER/","JUV/"]
 
 function loadProductsPage(value) {
 	sessionStorage.setItem("kit" , document.getElementsByClassName("title")[0].textContent[0] + value);
@@ -119,9 +121,86 @@ function productsPage() {
 
 		title.textContent = productName;
 	}
+
+	swaps=[0,0,0,0,0,0]
+	var kit_temp = sessionStorage.getItem("kit")
+
+	if(kit_temp === 'F1') {
+
+		var toggleButton = document.getElementsByClassName("btn-product-card-outline");
+		var customiseButton = document.getElementsByClassName("btn-product-card");
+		for(var i = 0; i < 6; i++) {
+			toggleButton[i].classList.add("d-none");
+			customiseButton[i].style.width = "100%";
+		}
+
+		descs = Array()
+		descs.push("Fast used to be fast enough. Gear up and ghost everyone.")
+		descs.push("It shows no mercy. It feels no pity. Mute your enemies.")
+		descs.push("Touch and Control. go on take our most innovative boot.")
+		descs.push("Reflection of power, speed and agility. Let's Superfly")
+		descs.push("inject a tounh of flair to our game. It IS revolutionary")
+		descs.push("Speed, Acceleration and Mystrey. Feel like a king with us.")
+
+		prodesc = document.getElementsByClassName("product-desc")
+
+		for(let i=0; i<6; i++) {
+			prodesc[i].textContent = descs[i];
+		}
+	}
+
+	if(kit_temp === 'F2') {
+		document.getElementsByClassName("title")[0].textContent = "Football - Jerseys";
+		teams = Array()
+		teams.push("Real Madrid FC");
+		teams.push("Man. Utd. FC");
+		teams.push("Paris Saint Germain");
+		teams.push("France");
+		teams.push("Germany");
+		teams.push("Juventus FC");
+
+		descs = Array()
+		descs.push("For all those haters from FCB, we are 'The Club of the Century'. Hala Madrid!")
+		descs.push("There is a reason why we are known as 'The Red Devils'. Concilio Et Labore!")
+		descs.push("Seems everyone wants an attacking trio just like we have. Paris est Magique!")
+		descs.push("Isn't it simply great feeling to be a 'The World Champion'?. Allez les Bleus!")
+		descs.push("Our cannons will be attacking, when we have a wall defending us. #Zsmmm!!")
+		descs.push("It's rejoice and celebrate as the KING(GOAT) plays for us. Fino Alla Fine!")
+
+		prodesc = document.getElementsByClassName("product-desc")
+
+		for(let i=0; i<6; i++) {
+			prodesc[i].textContent = descs[i];
+		}
+
+
+		ProductCards = document.getElementsByClassName("product-name")
+
+		for(let i=0; i<6; i++) {
+			ProductCards[i].textContent = teams[i]
+		}
+
+		productImages = document.getElementsByClassName("img-fluid")
+		
+		for(let i=0; i<6; i++) {
+			productImages[i].src = new_src+locs[i]+"1.png";
+		}
+
+		for(let i=0; i<6; i++) {
+			document.getElementsByClassName("btn-product-card-outline")[i].textContent = "AWAY";
+		}
+	}
 }
 
 function toggleButton(value) {
+
+	var kit_temp = sessionStorage.getItem("kit")
+
+	if(kit_temp === "F2") {
+		changeimg(parseInt(value)-1);
+		return;
+	}
+
 	var imgSrc = "Assets/cricket_jersey/";
 	switch(value) {
 		case "1" : 
@@ -174,6 +253,13 @@ function toggleButton(value) {
 	} 
 }
 
+function changeimg(i) {
+	swaps[i] = (swaps[i]+1)%3;
+	var imgtag = swaps[i]+1;
+	document.getElementsByClassName("img-fluid")[i].src = new_src+locs[i]+imgtag+".png";
+	new_toggle_names=["AWAY","THIRD","HOME"];
+	document.getElementsByClassName("btn-product-card-outline")[i].textContent = new_toggle_names[swaps[i]];
+}
 
 
 
