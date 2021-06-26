@@ -73,7 +73,7 @@ main img {
 
 .btns {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .btn-kit-card-outline {
@@ -138,9 +138,11 @@ main img {
 	margin-top: 15px;
 	margin-bottom: 10px;
 	line-height: 2;
+	padding: 0 10px;
 }
 
 .kit-desc {
+	padding: 0 10px;
 	font-size: 1.1rem;
 	line-height: 1.8;
 	margin-bottom: 10px;
