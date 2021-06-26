@@ -65,6 +65,10 @@ main img {
     align-items: center;
 }
 
+.img-width {
+	max-width: 250px;
+}
+
 /* Buttons */
 
 .btns {
@@ -145,13 +149,6 @@ main img {
 main .title {
     margin: 100px 0 70px;
     color: #007BFF;
-}
-
-/* Heart Icon */
-
-.fa-heart {
-	font-size: 2.5rem;
-	color: red;
 }
 
 /* Footer */
@@ -249,6 +246,10 @@ footer span {
 }
 
 @media (max-width: 350px) {
+
+	.img-width {
+		width: 180px;
+	}
 
 	.btns {
 		flex-direction: column;
