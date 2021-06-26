@@ -34,6 +34,10 @@ header .container-fluid {
 	color: white !important;
 }
 
+.dropdown-header {
+	color: #007BFF !important;
+}
+
 /* Main */
 /* ---------------------------------------------------- */
 
