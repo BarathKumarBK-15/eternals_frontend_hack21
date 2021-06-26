@@ -14,7 +14,7 @@
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
 
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -39,10 +39,10 @@
 				    <div class="collapse navbar-collapse" id="navbar-content">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item ps-3">
-								<a href="" class="nav-link active">Home</a>
+								<a href="" class="nav-link">Home</a>
 							</li>
 							<li class="nav-item dropdown ps-3">
-			          			<a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">
+			          			<a class="nav-link dropdown-toggle active" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">
 					            Products
 					         	</a>
 					         <ul class="dropdown-menu" aria-labelledby="productsDropdown">
@@ -54,7 +54,6 @@
 					            <li><a class="dropdown-item disabled" href="#">FootBall</a></li>
 					            <li><a class="dropdown-item" href="#">Jerseys</a></li>
 					            <li><a class="dropdown-item" href="#">Boots</a></li>
-					            <li><a class="dropdown-item" href="#">Gloves</a></li>
 					        </ul>
 					        </li>
 							<li class="nav-item ps-2">
@@ -72,77 +71,70 @@
 	<main>	
 		<div class="container-lg">
 
-        <br></br>
-        <br></br>
-
-        <div class="row" >
-            <div class="col-md-6">
-                <div class="purchase-card">
-                    <div id="main-img-col">
-                        <div class="imgbackground">
-                            <img class="img-fluid" src="Assets/boots/Adidas Ghost/1.png">
-                        </div>
-                        <div class="sub-main-img">
-                            <div class="imgbackground">
-                                <img class="img-fluid" src="Assets/boots/Adidas Ghost/1.png">
-                            </div>
-                        </div>
-                        <div class="sub-main-img">
-                            <div class="imgbackground">
+	        <div class="row">
+	            <div class="col-lg-6">
+	                <div class="purchase-card">
+	                    <div class="d-flex justify-content-center">
+	                        <div class="imgbackground">
+	                            <img class="img-fluid" src="Assets/boots/Adidas Ghost/1.png">
+	                        </div>
+	                        <div class="img-container-width-sm">
+	                        	<div class="imgbackground-sm">
+		                            <img class="img-fluid" src="Assets/boots/Adidas Ghost/4.png">
+	                        	</div>
+	                        	<div class="imgbackground-sm">
+		                            <img class="img-fluid" src="Assets/boots/Adidas Ghost/5.png">
+	                        	</div>
+	                        </div>
+		                </div>
+	                    <div class="d-flex justify-content-center">
+                            <div class="img-container-width imgbackground">
                                 <img class="img-fluid" src="Assets/boots/Adidas Ghost/2.png">
                             </div>
-                        </div>
-                    </div>
-                    <div id="second-img-col">
-                        <div class="sub-second-img">
-                            <div class="imgbackground">
+                            <div class="img-container-width imgbackground">
                                 <img class="img-fluid" src="Assets/boots/Adidas Ghost/3.png">
-                            </div>
-                        </div>
-                        <div class="sub-second-img">
-                            <div class="imgbackground">
-                                <img class="img-fluid" src="Assets/boots/Adidas Ghost/4.png">
-                            </div>
-                        </div>
-                        <div class="sub-second-img">
-                            <div class="imgbackground">
-                                <img class="img-fluid" src="Assets/boots/Adidas Ghost/5.png">
-                            </div>
-                        </div>
-                        <div class="sub-second-img">
-                            <div class="imgbackground">
-                                <img class="img-fluid" src="Assets/boots/Adidas Ghost/6.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+		                    </div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-lg-1 offset">
+	            	
+	            </div>
+	            <div class="col-lg-5">
+	                <h1 id="purchase-title">Adidas X Ghosted</h1>
+	                <p id="purchase-desc">Fast used to be fast enough. Gear up and ghost everyone in these adidas Ghosted.</p>
+	                <p id="purchase-brand">adidas  <img id="tick" src="Assets/Landing/tick.png"/> </p>
+	                <div id="purchase-price" class="d-flex">
+	                    <h2>₹</h2>
+	                    <h2 id="price-rupee">4,999.00</h2>
+	                    <p>(incl. taxes)</p>
+	                </div>
+	                <div class="star-container d-flex">
+	                	<i class="fas fa-star"></i>
+	                	<i class="fas fa-star"></i>
+	                	<i class="fas fa-star"></i>
+	                	<i class="fas fa-star"></i>
+	                	<i class="far fa-star"></i>
+	                </div>
+	                <div id="purchase-colors">
+	                    <h3>Colour</h3>
+	                    <div class="color-container d-flex">
+		                    <div class="color-circle" id="circle-1"></div> 
+		                    <div class="color-circle" id="circle-2"></div> 
+		                    <div class="color-circle" id="circle-3"></div> 
+		                    <div class="color-circle" id="circle-4"></div> 
+	                    </div>
+	                </div>
+	                <div class="btns">
+	                    <button class="col-6 btn-product-card-outline">BUY NOW</button>
+	                    <button class="col-6 btn-product-card">ADD TO CART</button>
+	                </div>             
+	            </div>
+	            </div>
+	        </div>
+	    </div>
 
-            <div class="col-md-1 space">
-                <div id="midline"></div>
-            </div>
-
-            <div class="col-md-5 texts">
-                <h1 id="purchase-title">Adidas X Ghosted</h1>
-                <p id="purchase-text">Fast used to be fast enough. Gear up and ghost everyone in these adidas Ghosted.</p>
-                <p id="purchase-brand">adidas  <img class="img-fliud" id="tick" src="Assets/Landing/tick.png"/> </p>
-                <div class="purchase-price">
-                    <h2>₹</h2>
-                    <h2 id="price-rupee">4,999.00</h2>
-                    <p>(incl. taxes)</p>
-                </div>
-                <div class="purchase-colors">
-                    <h3>Colour</h3>
-                    <div class="color-circle" id="circle1"></div> 
-                    <div class="color-circle" id="circle2"></div> 
-                    <div class="color-circle" id="circle3"></div> 
-                    <div class="color-circle" id="circle4"></div> 
-                </div>
-                <button class="purchase-button">BUY NOW</button>
-                <button class="purchase-button">ADD TO CART</button>                
-            </div>
-        </div>
-		</div>
+	             
 	</main>
 	
 	<footer>
