@@ -274,6 +274,149 @@ function funcme() {
 	console.log("Hello")
 }
 
+function loadCustomPage(value) {
+	kit_temp = sessionStorage.getItem("kit")
+	if(kit_temp === 'F1' && value =='1') {
+		sessionStorage.setItem("brand","adidas")
+	}
+	if(kit_temp === 'F1' && value =='2') {
+		sessionStorage.setItem("brand","adidas")
+	}
+	if(kit_temp === 'F1' && value =='3') {
+		sessionStorage.setItem("brand","nike")
+	}
+	if(kit_temp === 'F1' && value =='4') {
+		sessionStorage.setItem("brand","nike")
+	}
+	if(kit_temp === 'F1' && value =='5') {
+		sessionStorage.setItem("brand","puma")
+	}
+	if(kit_temp === 'F1' && value =='6') {
+		sessionStorage.setItem("brand","puma")
+	}
+	if(kit_temp === 'F2' && value =='1') {
+		sessionStorage.setItem("brand","adidas")
+		sessionStorage.setItem("swaps", swaps)
+	}
+	if(kit_temp === 'F2' && value =='2') {
+		sessionStorage.setItem("brand","adidas")
+		sessionStorage.setItem("swaps", swaps)
+	}
+	if(kit_temp === 'F2' && value =='3') {
+		sessionStorage.setItem("brand","nike")
+		sessionStorage.setItem("swaps", swaps)
+	}
+	if(kit_temp === 'F2' && value =='4') {
+		sessionStorage.setItem("brand","nike")
+		sessionStorage.setItem("swaps", swaps)
+	}
+	if(kit_temp === 'F2' && value =='5') {
+		sessionStorage.setItem("brand","adidas")
+		sessionStorage.setItem("swaps", swaps)
+	}
+	if(kit_temp === 'F2' && value =='6') {
+		sessionStorage.setItem("brand","adidas")
+		sessionStorage.setItem("swaps", swaps)
+	}
+	sessionStorage.setItem("product", value);
+	window.document.location.href = "./purchase.html";
+}
+
+function customPage() {
+	var kit_temp = sessionStorage.getItem("kit");
+	var pro_temp = sessionStorage.getItem("product");
+	var brand = sessionStorage.getItem("brand")
+
+	pro_title=[]
+
+	if(kit_temp === 'F1') {
+		i = parseInt(pro_temp)-1
+		pro_title = ["Adidas X Ghosted","Adidas Predator 20.3","Nike Phantom","Nike Superfly 8 Elite","Puma Future Z","Puma Ultra"]
+		document.getElementById("purchase-title").textContent = pro_title[i]
+
+		descs = Array()
+		descs.push("Fast used to be fast enough. Gear up and ghost everyone.")
+		descs.push("It shows no mercy. It feels no pity. Mute your enemies.")
+		descs.push("Touch and Control. go on take our most innovative boot.")
+		descs.push("Reflection of power, speed and agility. Let's Superfly")
+		descs.push("inject a tounh of flair to our game. It IS revolutionary")
+		descs.push("Speed, Acceleration and Mystrey. Feel like a king with us.")
+
+		purdesc = document.getElementById("purchase-desc")	
+		purdesc.textContent = descs[i];
+
+		purbrand = document.getElementById("purchase-brand")	
+		purbrand.textContent = brand;
+
+		prices = ["4,999.00","6,599.00","9,995.00","21,995.00","9,599.00","15,999.00"]
+
+		purprice = document.getElementById("price-rupee")	
+		purprice.textContent = prices[i];
+
+		loc_src = "Assets/boots/"
+		boot_locs = ["Adidas_Ghosted/","Adidas_Predator/","Nike_Phantom/","Nike_Superfly/","Puma_Future/","Puma_Ultra/"]
+
+		purimages = document.getElementsByClassName("img-fluid")
+
+		for(let j=0; j<5; j++) {
+			purimages[j].src = loc_src+boot_locs[i]+(j+1)+".png"
+		}
+
+	} else if(kit_temp === 'F2') {
+
+		i = parseInt(pro_temp)-1
+
+		teams = Array()
+		teams.push("Real Madrid FC");
+		teams.push("Man. Utd. FC");
+		teams.push("Paris Saint Germain");
+		teams.push("France");
+		teams.push("Germany");
+		teams.push("Juventus FC");
+		document.getElementById("purchase-title").textContent = teams[i]
+
+		descs = Array()
+		descs.push("For all those haters from FCB, we are 'The Club of the Century'. Hala Madrid!")
+		descs.push("There is a reason why we are known as 'The Red Devils'. Concilio Et Labore!")
+		descs.push("Seems everyone wants an attacking trio just like we have. Paris est Magique!")
+		descs.push("Isn't it simply great feeling to be a 'The World Champion'?. Allez les Bleus!")
+		descs.push("Our cannons will be attacking, when we have a wall defending us. #Zsmmm!!")
+		descs.push("It's rejoice and celebrate as the KING(GOAT) plays for us. Fino Alla Fine!")
+
+		purdesc = document.getElementById("purchase-desc")	
+		purdesc.textContent = descs[i];
+
+		purbrand = document.getElementById("purchase-brand")	
+		purbrand.textContent = brand;
+
+		prices = ["5,499.00","4,999.00","4,699.00","4,499.00","4,499.00","4,999.00"]
+
+		purprice = document.getElementById("price-rupee")	
+		purprice.textContent = prices[i];
+
+		loc_src = new_src
+		boot_locs = locs
+		addup = sessionStorage.getItem("swaps")
+
+		purimages = document.getElementsByClassName("img-fluid")
+
+		piccontainer = document.getElementsByClassName("img-container-width-sm")
+		piccontainer[0].classList.add("d-none")
+
+		piccontainer = document.getElementsByClassName("hor-img")
+		piccontainer[0].classList.add("d-none")
+
+		purimages[0].src = loc_src+boot_locs[i]+(1+parseInt(addup[2*i]))+".png"
+		console.log(addup)
+	} 
+}
+
+function imgswap(value) {
+	var temp = document.getElementsByClassName("img-fluid")[0].src
+	document.getElementsByClassName("img-fluid")[0].src = document.getElementsByClassName("img-fluid")[value].src
+	document.getElementsByClassName("img-fluid")[value].src = temp
+}
+
 
 
 
