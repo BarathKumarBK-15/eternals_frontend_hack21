@@ -252,9 +252,8 @@ footer span {
 
 	main .row {
 		width: 75vw;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.nav-item:nth-of-type(3) {
@@ -266,8 +265,7 @@ footer span {
 @media (max-width: 767px) {
 
 	main .row {
-		margin: 40px;
-		margin-top: 200px;
+		margin-top: 125px;
 	}
 
 	main .col-md-6 , main .col-md-5 {
@@ -282,8 +280,7 @@ footer span {
 @media (max-width:  575px) {
 
 	main .row {
-		margin: 40px 0;
-		margin-top: 200px;
+		margin-top: 125px;
 	}
 
 	footer .social-icons {
@@ -303,10 +300,6 @@ footer span {
 		font-size: 1.8rem;
 	}
 
-}
-
-@media (max-width:  450px) {
-
 	.imgbackground {
 		min-height: 100px;
 	}
@@ -321,24 +314,34 @@ footer span {
 	}
 }
 
-@media (max-width: 360px) {
+@media (max-width:  450px) {
 
 	main .row {
-		margin-top: 200px;
+		width: 90vw;
 	}
 
 	.btns {
 		flex-direction: column;
 	}
-
+	.btn-product-card-outline {
+		width: 100%;
+	}
 	.btn-product-card {
 		width: 100%;
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
+}
 
-	.btn-product-card-outline {
-		width: 100%;
+@media (max-width: 360px) {
+
+	main .row {
+		margin-top: 125px;
+	}
+
+	.color-container .color-circle {
+		height: 30px;
+		width: 30px;
 	}
 
 }
