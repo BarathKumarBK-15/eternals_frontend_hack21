@@ -27,6 +27,13 @@ var swaps=[0,0,0,0,0,0]
 let new_src = "Assets/football_jerseys/"
 let locs=["RMFC/","MANU/","PSG/","FRA/","GER/","JUV/"]
 
+function loadProductsPages(value) {
+	var sportValue = value[0] === "C" ? "cricket" : "football";
+	sessionStorage.setItem("sport" , sportValue);
+	sessionStorage.setItem("kit" , value);
+	window.document.location.href = "./products.html"; 
+}
+
 function loadProductsPage(value) {
 	sessionStorage.setItem("kit" , document.getElementsByClassName("title")[0].textContent[0] + value);
 	window.document.location.href = "./products.html"; 
@@ -263,7 +270,9 @@ function changeimg(i) {
 
 
 
-
+function funcme() {
+	console.log("Hello")
+}
 
 
 
