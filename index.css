@@ -146,6 +146,17 @@ main img {
 	transition: ease-out 0.4s;
 }
 
+.btn-form {
+	border-color: white;
+	color: white;
+	background-color: transparent;
+}
+
+.btn-form:hover {
+	background-color: white;
+	color: #007BFF;
+}
+
 /* Intro Card */
 .sport-intro-card {
 	padding: 30px;
@@ -177,7 +188,7 @@ main img {
 /* Footer */
 /* ---------------------------------------------------- */
 
-footer {
+#footer-icons {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -210,6 +221,35 @@ footer span {
 	font-weight: 600;
 	font-size: 1.5rem;
 }
+
+/* Forms */
+/* ---------------------------------------------------- */
+#forms {
+	border-radius: 20px 20px 0 0;
+	width: 100vw;
+	background-color: #007BFF;
+	margin-bottom: 45px;
+}
+
+form {
+	display: flex;
+	justify-content: flex-end;
+}
+
+form input {
+	padding: 10px 15px !important;
+}
+
+.name-section {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+
+.name-section .col-6 {
+	width: 49%;
+}
+
 
 /* Media Queries */
 /* ---------------------------------------------------- */
@@ -287,6 +327,26 @@ footer span {
 
 	.landing-page .title {
 		font-size: 2.5rem;
+	}
+
+	.name-section {
+		flex-direction: column;
+	}
+
+	.name-section .col-6 {
+		width: 100%;
+	}
+
+	.name-section input:nth-of-type(1) {
+		margin-top: 24px;
+	}
+
+}
+
+@media (max-width:  400px) {
+
+	#forms .col-lg-6 {
+		padding: 0 15px !important;
 	}
 
 }
