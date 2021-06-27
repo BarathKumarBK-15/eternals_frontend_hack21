@@ -1,4 +1,5 @@
 function homePage(value) {
+
 	sessionStorage.setItem("sport" , value);
 	window.document.location.href = "./sportkit.html"; 
 }
@@ -659,6 +660,35 @@ function changeHeart(value) {
 	}
 }
 
+var switchButton = document.getElementsByClassName("form-check-input")[0];
+switchButton.addEventListener("click" , function(event) {
+	if(event.target.checked === true) {
+		document.querySelector("body").classList.add("body-dark");
+
+		var card = document.getElementsByClassName("sport-card");
+		for(var i = 0; i < card.length; i++) {
+			card[i].classList.add("sport-card-dark");
+		}
+
+		var introCard = document.getElementsByClassName("sport-intro-card");
+		for(var i = 0; i < introCard.length; i++) {
+			introCard[i].classList.add("sport-intro-card-dark");
+		}
+		sessionStorage.setItem("dark" , "1");
+	} else {
+		document.querySelector("body").classList.remove("body-dark");
+		var card = document.getElementsByClassName("sport-card");
+		for(var i = 0; i < card.length; i++) {
+			card[i].classList.remove("sport-card-dark");
+		}
+
+		var introCard = document.getElementsByClassName("sport-intro-card");
+		for(var i = 0; i < introCard.length; i++) {
+			introCard[i].classList.remove("sport-intro-card-dark");
+		}
+		sessionStorage.setItem("dark" , "0");
+	}
+});
 
 
 

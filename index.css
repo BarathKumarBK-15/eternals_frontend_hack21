@@ -2,6 +2,11 @@
 	font-family: 'Poppins';
 }
 
+.body-dark {
+	background-color: #212529;
+	color: white;
+}
+
 /* Header */
 /* ---------------------------------------------------- */
 
@@ -122,6 +127,11 @@ main .container-lg .row {
 	box-shadow: 1px 2px 5px grey;
 }
 
+.sport-card-dark {
+	background-color: #252A41;
+	box-shadow: 1px 2px 5px #212529;
+}
+
 /* Images */
 main img {
 	border-radius: 5px;
@@ -129,7 +139,7 @@ main img {
 
 /* Buttons */
 .btn-sport-card {
-	background-color: white;
+	background-color: transparent;
 	color: #007BFF;
 	font-size: 1.3rem;
 	padding: 13px 10px ;
@@ -137,6 +147,10 @@ main img {
 	margin-top: 20px;
 	border: 2px solid #007BFF;
 	transition: ease-in 0.4s;
+}
+
+.btn-sport-card-dark {
+	background-color: #252A41;
 }
 
 .btn-sport-card:hover {
@@ -162,6 +176,11 @@ main img {
 	padding: 30px;
 	border-radius: 8px;
 	box-shadow: 1px 2px 5px grey;
+}
+
+.sport-intro-card-dark {
+	background-color: #252A41;
+	box-shadow: 1px 2px 5px #212529;
 }
 
 /* Texts */
