@@ -20,7 +20,30 @@ function sportKitPage() {
 
 		document.getElementsByClassName("kit-name")[0].textContent = "Gloves";
 		document.getElementsByClassName("kit-name")[2].textContent = "Bats";
+
+		descs = ["View our brand new collection of confortable, blisterless, grippy, gloves, now with new shock absorption."]
+		descs.push("Support your favourite team and show the power of the crowd by checking out our jersey merch shelf.")
+		descs.push("Check out our new varieties of high quality willow bats, that will provide you optimum performance")
+
+		kit_descs = document.getElementsByClassName("kit-desc");
+		console.log(descs)
+
+		for(let i=0;i<3;i++) {
+			kit_descs[i].textContent = descs[i];
+		}
 	} 
+
+	else {
+		descs = ["Decide your speed, acceleration, precision and control by deciding on our new variety of boots."]
+		descs.push("Support your favourite team and show the power of the crowd by checking out our jersey merch shelf.")
+
+		kit_descs = document.getElementsByClassName("kit-desc");
+		console.log(descs)
+
+		for(let i=0;i<2;i++) {
+			kit_descs[i].textContent = descs[i];
+		}
+	}
 }
 
 var swaps=[0,0,0,0,0,0]
@@ -397,6 +420,12 @@ function customPage() {
 			purimages[j].src = loc_src+boot_locs[i]+(j+1)+".png"
 		}
 
+		sizes = document.getElementsByClassName("color-circle")
+
+		for(let j=0; j<sizes.length; j++) {
+			sizes[j].textContent = (j+7)
+		}
+
 	} else if(kit_temp === 'F2') {
 
 		i = parseInt(pro_temp)-1
@@ -566,6 +595,12 @@ function customPage() {
 		purdesc = document.getElementById("purchase-desc")	
 		purdesc.textContent = desc;
 
+		sizes = document.getElementsByClassName("color-circle")
+
+		for(let j=0; j<sizes.length; j++) {
+			sizes[j].textContent = (j+7)
+		}
+
 	}
 }
 
@@ -574,6 +609,56 @@ function imgswap(value) {
 	document.getElementsByClassName("img-fluid")[0].src = document.getElementsByClassName("img-fluid")[value].src
 	document.getElementsByClassName("img-fluid")[value].src = temp
 }
+
+
+function choose_size(value) {
+
+	circles = document.getElementsByClassName("color-circle")
+
+	for(let i=0; i<4; i++) {
+		if(value === i){
+			if(!circles[i].classList.contains("btn-product-card")) {
+				circles[i].classList.remove("btn-product-card-outline")
+				circles[i].classList.add("btn-product-card")
+			}
+
+		} else {
+			if(!circles[i].classList.contains("btn-product-card-outline")) {
+				circles[i].classList.remove("btn-product-card")
+				circles[i].classList.add("btn-product-card-outline")
+			}
+		}
+	}
+}
+
+function choose_star(value) {
+	stars = document.getElementsByClassName("fa-star") 
+	
+	for(let i=0; i<value; i++) {
+		if(!stars[i].classList.contains("fas")) {
+			stars[i].classList.remove("far")
+			stars[i].classList.add("fas")
+		}
+	}
+
+	for(let i=value; i<5; i++) {
+		if(!stars[i].classList.contains("far")) {
+			stars[i].classList.add("far")
+			stars[i].classList.remove("fas")
+		}
+	}
+}
+
+function changeHeart(value) {
+	if(!document.getElementsByClassName("fa-heart")[value].classList.contains("fas")) {
+		document.getElementsByClassName("fa-heart")[value].classList.remove("far")
+		document.getElementsByClassName("fa-heart")[value].classList.add("fas")
+	} else {
+		document.getElementsByClassName("fa-heart")[value].classList.add("far")
+		document.getElementsByClassName("fa-heart")[value].classList.remove("fas")
+	}
+}
+
 
 
 
