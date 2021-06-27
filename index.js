@@ -42,6 +42,7 @@ function loadProductsPage(value) {
 function productsPage() {
 	var sport = sessionStorage.getItem("sport")
 	var kit = sessionStorage.getItem("kit");
+	sessionStorage.setItem("toggle" , "1");
 	if(sport === "cricket") {
 		var title = document.getElementsByClassName("title")[0];
 		var productName = "Cricket - ";
@@ -67,7 +68,7 @@ function productsPage() {
 			document.getElementsByClassName("product-desc")[1].textContent = "Turn on 'THE BEAST MODE' before the start of play.";
 
 			document.getElementsByClassName("img-fluid")[2].src = imgSrc + "31.png";
-			document.getElementsByClassName("product-desc")[2].textContent = "Beast Pro";
+			document.getElementsByClassName("product-name")[2].textContent = "Pace 2.4";
 			document.getElementsByClassName("product-desc")[2].textContent = "Comfort, Stylish, and Safety is what 'Pace 2.4' provides you!";
 
 		}
@@ -258,6 +259,10 @@ function toggleButton(value) {
 				img.src = imgSrc + "wi1.png";
 			break;
 	} 
+	var val = "1";
+	if(img.src[img.src.length - 5] === "2") 
+		val = "2";
+	sessionStorage.setItem("toggle" , val)
 }
 
 function changeimg(i) {
@@ -266,12 +271,6 @@ function changeimg(i) {
 	document.getElementsByClassName("img-fluid")[i].src = new_src+locs[i]+imgtag+".png";
 	new_toggle_names=["AWAY","THIRD","HOME"];
 	document.getElementsByClassName("btn-product-card-outline")[i].textContent = new_toggle_names[swaps[i]];
-}
-
-
-
-function funcme() {
-	console.log("Hello")
 }
 
 function loadCustomPage(value) {
@@ -317,6 +316,42 @@ function loadCustomPage(value) {
 	if(kit_temp === 'F2' && value =='6') {
 		sessionStorage.setItem("brand","adidas")
 		sessionStorage.setItem("swaps", swaps)
+	}
+	if(kit_temp === 'C1' && value == '1') {
+		sessionStorage.setItem("brand","1")
+	}
+	if(kit_temp === 'C1' && value == '2') {
+		sessionStorage.setItem("brand","2")
+	}
+	if(kit_temp === 'C1' && value == '3') {
+		sessionStorage.setItem("brand","3")
+	}
+	if(kit_temp === 'C2' && value == '1') {
+		sessionStorage.setItem("brand","1")
+	}
+	if(kit_temp === 'C2' && value == '2') {
+		sessionStorage.setItem("brand","2")
+	}
+	if(kit_temp === 'C2' && value == '3') {
+		sessionStorage.setItem("brand","3")
+	}
+	if(kit_temp === 'C2' && value == '4') {
+		sessionStorage.setItem("brand","4")
+	}
+	if(kit_temp === 'C2' && value == '5') {
+		sessionStorage.setItem("brand","5")
+	}
+	if(kit_temp === 'C2' && value == '6') {
+		sessionStorage.setItem("brand","6")
+	}
+	if(kit_temp === 'C3' && value == '1') {
+		sessionStorage.setItem("brand","1")
+	}
+	if(kit_temp === 'C3' && value == '2') {
+		sessionStorage.setItem("brand","2")
+	}
+	if(kit_temp === 'C3' && value == '3') {
+		sessionStorage.setItem("brand","3")
 	}
 	sessionStorage.setItem("product", value);
 	window.document.location.href = "./purchase.html";
@@ -408,7 +443,130 @@ function customPage() {
 
 		purimages[0].src = loc_src+boot_locs[i]+(1+parseInt(addup[2*i]))+".png"
 		console.log(addup)
-	} 
+	} else if(kit_temp === 'C1') {
+
+		purimages = document.getElementsByClassName("img-fluid")
+		piccontainer = document.getElementsByClassName("img-container-width-sm")
+		piccontainer[0].classList.add("d-none")
+
+		piccontainer = document.getElementsByClassName("hor-img")
+		piccontainer[0].classList.add("d-none")
+
+		var imgSrc = "Assets/cricket_gloves/gloves";
+		purimages[0].src = imgSrc + brand + "1" + ".png";
+
+		purprice = document.getElementById("price-rupee")	
+		var price = "2999.99";
+		if(brand === "1") price = "3999.99";
+		else if(brand === "2") price = "5999.99";
+		purprice.textContent = price;
+
+		purbrand = document.getElementById("purchase-brand")	
+		purbrand.textContent = "kookaburra";
+
+		var title = "Kauna 2.1";
+		if(brand === "2") title = "Beast Pro";
+		else if(brand === "3") title = "Pace 2.4";
+		document.getElementById("purchase-title").textContent = title
+
+		var desc = "The safest pair of gloves with stunning green look!";
+		if(brand === "2") 
+			desc = "Turn on 'THE BEAST MODE' before the start of play."
+		else if(brand === "3")
+			desc = "Comfort, Stylish, and Safety is what 'Pace 2.4' provides you!"
+		purdesc = document.getElementById("purchase-desc")	
+		purdesc.textContent = desc;
+
+	} else if(kit_temp === 'C2') {
+
+		purimages = document.getElementsByClassName("img-fluid")
+		piccontainer = document.getElementsByClassName("img-container-width-sm")
+		piccontainer[0].classList.add("d-none")
+
+		piccontainer = document.getElementsByClassName("hor-img")
+		piccontainer[0].classList.add("d-none")
+
+		var toggle = sessionStorage.getItem("toggle");
+
+		var imgSrc = "Assets/cricket_jersey/";
+		if(brand === "1") imgSrc += "aus";
+		else if(brand === "2") imgSrc += "eng";
+		else if(brand === "3") imgSrc += "ind";
+		else if(brand === "4") imgSrc += "nz";
+		else if(brand === "5") imgSrc += "sa";
+		else if(brand === "6") imgSrc += "wi";
+		purimages[0].src = imgSrc + toggle + ".png";
+
+		purprice = document.getElementById("price-rupee")	
+		purprice.textContent = "1999.00";
+
+
+		purbrand = document.getElementById("purchase-brand")	
+
+		var team = "ca";
+		var title = "Australia";
+		var desc = "Get on with the Aussies jersey and shout out - 'SAY NO TO DIE'!";
+		if(brand === "2") {
+			team = "ecb";
+			title = "England";	
+			desc = "The cup has come home after a very long time, let's celebrate it.";
+		} else if(brand === "3") {
+			team = "bcci";
+			title = "India";	
+			desc = "Support the Men in Blue, who cares if they wear whites against The Kiwis.";
+		} else if(brand === "4") {
+			team = "nzc";
+			title = "New Zealand";	
+			desc = "Love the 'Sport', Love the 'Country', and Love 'The Kiwis Kindness'!";
+		} else if(brand === "5") {
+			team = "csa";
+			title = "South Africa";	
+			desc = "We are 'The Most Unluckiest', do support us with our awesome jerseys.";
+		} else if(brand === "6") {
+			team = "wicb";
+			title = "West Indies";
+			desc = "We once ruled this arena, just for wait 'THE GREATEST COMEBACK'!";
+		}
+		purbrand.textContent = team;
+		document.getElementById("purchase-title").textContent = title
+		purdesc = document.getElementById("purchase-desc")	
+		purdesc.textContent = desc;
+
+	} else if(kit_temp === 'C3') {
+		purimages = document.getElementsByClassName("img-fluid")
+		piccontainer = document.getElementsByClassName("img-container-width-sm")
+		piccontainer[0].classList.add("d-none")
+
+		piccontainer = document.getElementsByClassName("hor-img")
+		piccontainer[0].classList.add("d-none")
+
+		var imgSrc = "Assets/cricket_bats/bat";
+		purimages[0].src = imgSrc + brand + ".png";
+
+		purprice = document.getElementById("price-rupee")	
+		var price = "4999.99";
+		if(brand === "1") price = "7999.99";
+		else if(brand === "2") price = "11999.99";
+		purprice.textContent = price;
+
+		purbrand = document.getElementById("purchase-brand")	
+		purbrand.textContent = "kookaburra";
+
+		var title = "Kauna 2.0";
+		if(brand === "2") title = "Beast 1.0";
+		else if(brand === "3") title = "Pace Pro";
+		document.getElementById("purchase-title").textContent = title
+
+
+		var desc = "Bring on the 'classy' cover drives and on drives.";
+		if(brand === "2") 
+			desc = "Can someone see the ball? Please don't hurt it too much!"
+		else if(brand === "3")
+			desc = "Elegancy and Timing is the best way of playing it!"
+		purdesc = document.getElementById("purchase-desc")	
+		purdesc.textContent = desc;
+
+	}
 }
 
 function imgswap(value) {

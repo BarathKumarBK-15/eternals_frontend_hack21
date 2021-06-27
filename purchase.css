@@ -88,7 +88,13 @@ main img {
     align-items: center;
 }
 
+.brand {
+	display: flex;
+	align-items: center;
+}
+
 #tick {
+	margin-left: 5px;
     width: 20px;    
     display: inline-block;
 }
