@@ -7,6 +7,11 @@
 
 /* Container */
 
+.body-dark {
+	background-color: #212529;
+	color: white;
+}
+
 header .container-fluid {
 	padding: 0 !important;
 }
@@ -92,6 +97,14 @@ main img {
 	cursor: pointer;
 }
 
+.imgbackground-dark {
+    background-color: #212529;
+}
+
+.imgbackground-sm-dark {
+	background-color: #212529;
+}
+
 .brand {
 	display: flex;
 	align-items: center;
@@ -110,7 +123,7 @@ main img {
 }
 
 .btn-product-card-outline {
-	background-color: white;
+	background-color: transparent;
 	color: #007BFF;
 	font-size: 1.2rem;
 	padding: 10px;
@@ -150,6 +163,16 @@ main img {
 
 /* Intro Card */
 .purchase-card {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 50px;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 1px 2px 5px grey;
+}
+
+.purchase-card {
+	background-color: #252a41;
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 50px;

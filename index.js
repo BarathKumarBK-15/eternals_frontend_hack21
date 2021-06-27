@@ -5,6 +5,33 @@ function homePage(value) {
 }
 
 function sportKitPage() {
+	d = sessionStorage.getItem("dark")
+
+	if(d === '1') {
+		document.getElementsByClassName("x")[0].classList.add("body-dark")
+		kits = document.getElementsByClassName("kit-card") 
+		for(let i=0;i<kits.length;i++) {
+			kits[i].classList.add("kit-card-dark");
+		}
+		bgs = document.getElementsByClassName("img-background")
+		for(let i=0;i<kits.length;i++) {
+			bgs[i].classList.add("img-background-dark");
+		}
+	}
+
+	else {
+		document.getElementsByClassName("x")[0].classList.remove("body-dark")
+		kits = document.getElementsByClassName("kit-card") 
+		for(let i=0;i<kits.length;i++) {
+			kits[i].classList.remove("kit-card-dark");
+		}
+		bgs = document.getElementsByClassName("img-background")
+		for(let i=0;i<kits.length;i++) {
+			bgs[i].classList.remove("img-background-dark");
+		}
+	}
+
+
 	sport = sessionStorage.getItem("sport");
 	if(sport === 'cricket') {
 		document.getElementsByClassName("title")[0].textContent = "Cricket - Kits";
@@ -64,6 +91,32 @@ function loadProductsPage(value) {
 }
 
 function productsPage() {
+	d = sessionStorage.getItem("dark")
+
+	if(d === '1') {
+		document.getElementsByClassName("x")[0].classList.add("body-dark")
+		kits = document.getElementsByClassName("product-card") 
+		for(let i=0;i<kits.length;i++) {
+			kits[i].classList.add("product-card-dark");
+		}
+		bgs = document.getElementsByClassName("img-background")
+		for(let i=0;i<kits.length;i++) {
+			bgs[i].classList.add("img-background-dark");
+		}
+	}
+
+	else {
+		document.getElementsByClassName("x")[0].classList.remove("body-dark")
+		kits = document.getElementsByClassName("product-card") 
+		for(let i=0;i<kits.length;i++) {
+			kits[i].classList.remove("product-card-dark");
+		}
+		bgs = document.getElementsByClassName("img-background")
+		for(let i=0;i<kits.length;i++) {
+			bgs[i].classList.remove("img-background-dark");
+		}
+	}
+
 	var sport = sessionStorage.getItem("sport")
 	var kit = sessionStorage.getItem("kit");
 	sessionStorage.setItem("toggle" , "1");
@@ -382,6 +435,34 @@ function loadCustomPage(value) {
 }
 
 function customPage() {
+	d = sessionStorage.getItem("dark")
+
+	if(d === '1') {
+		document.getElementsByClassName("x")[0].classList.add("body-dark")
+		kits = document.getElementsByClassName("purchase-card") 
+		for(let i=0;i<kits.length;i++) {
+			kits[i].classList.add("purchase-card-dark");
+		}
+		bgs = document.getElementsByClassName("imgbackground")
+		for(let i=0;i<kits.length;i++) {
+			bgs[i].classList.add("img-background-dark");
+		}
+	} else {
+		document.getElementsByClassName("x")[0].classList.remove("body-dark")
+		kits = document.getElementsByClassName("purchase-card") 
+		for(let i=0;i<kits.length;i++) {
+			kits[i].classList.remove("purchase-card-dark");
+		}
+		bgs = document.getElementsByClassName("imgbackground")
+		for(let i=0;i<kits.length;i++) {
+			bgs[i].classList.remove("imgbackground-dark");
+		}
+		bgs = document.getElementsByClassName("imgbackground-sm")
+		for(let i=0;i<kits.length;i++) {
+			bgs[i].classList.remove("imgbackground-sm-dark");
+		}
+	}
+
 	var kit_temp = sessionStorage.getItem("kit");
 	var pro_temp = sessionStorage.getItem("product");
 	var brand = sessionStorage.getItem("brand")
