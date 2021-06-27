@@ -445,7 +445,11 @@ function customPage() {
 		}
 		bgs = document.getElementsByClassName("imgbackground")
 		for(let i=0;i<kits.length;i++) {
-			bgs[i].classList.add("img-background-dark");
+			bgs[i].classList.add("imgbackground-dark");
+		}
+		bgs = document.getElementsByClassName("imgbackground-sm")
+		for(let i=0;i<kits.length;i++) {
+			bgs[i].classList.add("imgbackground-sm-dark");
 		}
 	} else {
 		document.getElementsByClassName("x")[0].classList.remove("body-dark")
