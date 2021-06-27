@@ -60,7 +60,7 @@ main .landing-page {
 	height: 105vh;
 	width: 100vw;
 	border-radius: 0 0 20px 20px;
-	background-image: url(https://assets.khelnow.com/news/uploads/2019/10/Bundesliga_Joshua_Kimmich_201910.jpg);
+	background-image: url("Assets/Landing/light_bg.jpeg");
 	background-repeat: no-repeat;
 	background-position: 22% 70%;
 	background-size: cover;
