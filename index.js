@@ -665,6 +665,8 @@ switchButton.addEventListener("click" , function(event) {
 	if(event.target.checked === true) {
 		document.querySelector("body").classList.add("body-dark");
 
+		document.querySelector(".bg-landing").classList.add("landing-page-dark")
+
 		var card = document.getElementsByClassName("sport-card");
 		for(var i = 0; i < card.length; i++) {
 			card[i].classList.add("sport-card-dark");
@@ -677,6 +679,9 @@ switchButton.addEventListener("click" , function(event) {
 		sessionStorage.setItem("dark" , "1");
 	} else {
 		document.querySelector("body").classList.remove("body-dark");
+
+		document.querySelector(".bg-landing").classList.remove("landing-page-dark")
+
 		var card = document.getElementsByClassName("sport-card");
 		for(var i = 0; i < card.length; i++) {
 			card[i].classList.remove("sport-card-dark");
