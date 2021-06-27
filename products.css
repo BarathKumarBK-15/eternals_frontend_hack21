@@ -158,6 +158,10 @@ main .title {
 	color: red;
 }
 
+.fa-heart:hover {
+	cursor: pointer;
+}
+
 /* Footer */
 /* ---------------------------------------------------- */
 
