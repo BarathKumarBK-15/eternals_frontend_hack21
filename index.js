@@ -14,7 +14,7 @@ function sportKitPage() {
 			kits[i].classList.add("kit-card-dark");
 		}
 		bgs = document.getElementsByClassName("img-background")
-		for(let i=0;i<kits.length;i++) {
+		for(let i=0;i<bgs.length;i++) {
 			bgs[i].classList.add("img-background-dark");
 		}
 	}
@@ -26,7 +26,7 @@ function sportKitPage() {
 			kits[i].classList.remove("kit-card-dark");
 		}
 		bgs = document.getElementsByClassName("img-background")
-		for(let i=0;i<kits.length;i++) {
+		for(let i=0;i<bgs.length;i++) {
 			bgs[i].classList.remove("img-background-dark");
 		}
 	}
@@ -100,7 +100,7 @@ function productsPage() {
 			kits[i].classList.add("product-card-dark");
 		}
 		bgs = document.getElementsByClassName("img-background")
-		for(let i=0;i<kits.length;i++) {
+		for(let i=0;i<bgs.length;i++) {
 			bgs[i].classList.add("img-background-dark");
 		}
 	}
@@ -109,10 +109,11 @@ function productsPage() {
 		document.getElementsByClassName("x")[0].classList.remove("body-dark")
 		kits = document.getElementsByClassName("product-card") 
 		for(let i=0;i<kits.length;i++) {
+			console.log("a")
 			kits[i].classList.remove("product-card-dark");
 		}
 		bgs = document.getElementsByClassName("img-background")
-		for(let i=0;i<kits.length;i++) {
+		for(let i=0;i<bgs.length;i++) {
 			bgs[i].classList.remove("img-background-dark");
 		}
 	}
@@ -444,11 +445,11 @@ function customPage() {
 			kits[i].classList.add("purchase-card-dark");
 		}
 		bgs = document.getElementsByClassName("imgbackground")
-		for(let i=0;i<kits.length;i++) {
+		for(let i=0;i<bgs.length;i++) {
 			bgs[i].classList.add("imgbackground-dark");
 		}
 		bgs = document.getElementsByClassName("imgbackground-sm")
-		for(let i=0;i<kits.length;i++) {
+		for(let i=0;i<bgs.length;i++) {
 			bgs[i].classList.add("imgbackground-sm-dark");
 		}
 	} else {
@@ -458,11 +459,11 @@ function customPage() {
 			kits[i].classList.remove("purchase-card-dark");
 		}
 		bgs = document.getElementsByClassName("imgbackground")
-		for(let i=0;i<kits.length;i++) {
+		for(let i=0;i<bgs.length;i++) {
 			bgs[i].classList.remove("imgbackground-dark");
 		}
 		bgs = document.getElementsByClassName("imgbackground-sm")
-		for(let i=0;i<kits.length;i++) {
+		for(let i=0;i<bgs.length;i++) {
 			bgs[i].classList.remove("imgbackground-sm-dark");
 		}
 	}
