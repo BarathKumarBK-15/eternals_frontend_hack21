@@ -138,7 +138,6 @@ main img {
 	background-color: #007BFF;
 	cursor: pointer;
 	color: white;
-	transition: ease-out 0.4s;
 }
 
 .btn-product-card {
@@ -158,7 +157,6 @@ main img {
 	border: 2px solid #0065d1;
 	cursor: pointer;
 	color: white;
-	transition: ease-out 0.4s;
 }
 
 /* Intro Card */
@@ -173,12 +171,7 @@ main img {
 
 .purchase-card-dark {
 	background-color: #252a41;
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 50px;
-	padding: 15px;
-	border-radius: 5px;
-	box-shadow: 1px 2px 5px grey;
+	box-shadow: 1px 2px 5px #212529;
 }
 
 /* Texts */
@@ -193,8 +186,12 @@ main img {
 
 #purchase-brand {
 	font-size: 1.2rem;
-    color: blueviolet;
+    color: #6200EE;
     display: inline-block;
+}
+
+.purchase-brand-dark {
+	color: #BB86FC !important;
 }
 
 #purchase-price {
@@ -233,22 +230,6 @@ main img {
 	margin-bottom: 30px;
 }
 
-#circle-1 {
-	background-color: #FF9999;
-}
-
-#circle-2 {
-	background-color: #FFC8C8;
-}
-
-#circle-3 {
-	background-color: #8B97C6;
-}
-
-#circle-4 {
-	background-color: #63687E;
-}
-
 /* Footer */
 /* ---------------------------------------------------- */
 
@@ -271,7 +252,6 @@ footer .fa-2x {
 
 footer .fa-2x:hover {
 	color: #007BFF;
-	transition: 0.5s;
 }
 
 footer p {
@@ -381,8 +361,13 @@ footer span {
 	}
 
 	.color-container .color-circle {
-		height: 30px;
-		width: 30px;
+		height: 40px;
+		width: 40px;
+		font-size: 15px;
+	}
+
+	.color-container .btn-product-card , .color-container .btn-product-card-outline {
+		padding: 0;
 	}
 
 }

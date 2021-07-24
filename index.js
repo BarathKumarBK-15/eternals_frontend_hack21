@@ -42,9 +42,9 @@ function sportKitPage() {
 			cricketCard[i].classList.add("col-lg-4");
 		}
 
-		document.getElementsByClassName("img-fluid")[0].src ="Assets/Landing/gloves11.png";
-		document.getElementsByClassName("img-fluid")[1].src ="Assets/Landing/aus2.png";
-		document.getElementsByClassName("img-fluid")[2].src ="Assets/Landing/bat1.png";
+		document.getElementsByClassName("img-fluid")[0].src ="Assets/landing/gloves11.png";
+		document.getElementsByClassName("img-fluid")[1].src ="Assets/landing/aus2.png";
+		document.getElementsByClassName("img-fluid")[2].src ="Assets/landing/bat1.png";
 
 		document.getElementsByClassName("kit-name")[0].textContent = "Gloves";
 		document.getElementsByClassName("kit-name")[2].textContent = "Bats";
@@ -152,7 +152,7 @@ function productsPage() {
 		}
 		else if(kit[1] === '2') {
 			productName += "Jerseys";
-			var imgSrc = "Assets/cricket_jersey/";
+			var imgSrc = "Assets/cricket_jerseys/";
 
 			document.getElementsByClassName("img-fluid")[0].src = imgSrc + "aus1.png";
 			document.getElementsByClassName("product-name")[0].textContent = "Australia";
@@ -287,7 +287,7 @@ function toggleButton(value) {
 		return;
 	}
 
-	var imgSrc = "Assets/cricket_jersey/";
+	var imgSrc = "Assets/cricket_jerseys/";
 	switch(value) {
 		case "1" : 
 			var img = document.getElementsByClassName("img-fluid")[0];
@@ -452,6 +452,9 @@ function customPage() {
 		for(let i=0;i<bgs.length;i++) {
 			bgs[i].classList.add("imgbackground-sm-dark");
 		}
+
+		document.getElementById("purchase-brand").classList.add("purchase-brand-dark");
+
 	} else {
 		document.getElementsByClassName("x")[0].classList.remove("body-dark")
 		kits = document.getElementsByClassName("purchase-card") 
@@ -466,6 +469,7 @@ function customPage() {
 		for(let i=0;i<bgs.length;i++) {
 			bgs[i].classList.remove("imgbackground-sm-dark");
 		}
+		document.getElementById("purchase-brand").classList.remove("purchase-brand-dark");
 	}
 
 	var kit_temp = sessionStorage.getItem("kit");
@@ -498,7 +502,7 @@ function customPage() {
 		purprice = document.getElementById("price-rupee")	
 		purprice.textContent = prices[i];
 
-		loc_src = "Assets/boots/"
+		loc_src = "Assets/football_boots/"
 		boot_locs = ["Adidas_Ghosted/","Adidas_Predator/","Nike_Phantom/","Nike_Superfly/","Puma_Future/","Puma_Ultra/"]
 
 		purimages = document.getElementsByClassName("img-fluid")
@@ -604,7 +608,7 @@ function customPage() {
 
 		var toggle = sessionStorage.getItem("toggle");
 
-		var imgSrc = "Assets/cricket_jersey/";
+		var imgSrc = "Assets/cricket_jerseys/";
 		if(brand === "1") imgSrc += "aus";
 		else if(brand === "2") imgSrc += "eng";
 		else if(brand === "3") imgSrc += "ind";
@@ -746,41 +750,65 @@ function changeHeart(value) {
 	}
 }
 
+var dark = sessionStorage.getItem("dark");
+if(dark != null) {
+	if(dark === "1") {
+
+		document.getElementsByClassName("form-check-input")[0].checked = true;
+		applyLandingDarkMode();
+
+	} else {
+		document.querySelector("body").classList.remove("body-dark");
+		removeLandingDarkMode();
+
+	}
+}
 var switchButton = document.getElementsByClassName("form-check-input")[0];
 switchButton.addEventListener("click" , function(event) {
 	if(event.target.checked === true) {
-		document.querySelector("body").classList.add("body-dark");
 
-		document.querySelector(".bg-landing").classList.add("landing-page-dark")
-
-		var card = document.getElementsByClassName("sport-card");
-		for(var i = 0; i < card.length; i++) {
-			card[i].classList.add("sport-card-dark");
-		}
-
-		var introCard = document.getElementsByClassName("sport-intro-card");
-		for(var i = 0; i < introCard.length; i++) {
-			introCard[i].classList.add("sport-intro-card-dark");
-		}
+		applyLandingDarkMode();
 		sessionStorage.setItem("dark" , "1");
+
 	} else {
-		document.querySelector("body").classList.remove("body-dark");
-
-		document.querySelector(".bg-landing").classList.remove("landing-page-dark")
-
-		var card = document.getElementsByClassName("sport-card");
-		for(var i = 0; i < card.length; i++) {
-			card[i].classList.remove("sport-card-dark");
-		}
-
-		var introCard = document.getElementsByClassName("sport-intro-card");
-		for(var i = 0; i < introCard.length; i++) {
-			introCard[i].classList.remove("sport-intro-card-dark");
-		}
+		
+		removeLandingDarkMode();
 		sessionStorage.setItem("dark" , "0");
+
 	}
 });
 
+function applyLandingDarkMode() {
+	document.querySelector("body").classList.add("body-dark");
+
+	document.querySelector(".bg-landing").classList.add("landing-page-dark")
+
+	var card = document.getElementsByClassName("sport-card");
+	for(var i = 0; i < card.length; i++) {
+		card[i].classList.add("sport-card-dark");
+	}
+
+	var introCard = document.getElementsByClassName("sport-intro-card");
+	for(var i = 0; i < introCard.length; i++) {
+		introCard[i].classList.add("sport-intro-card-dark");
+	}
+}
+
+function removeLandingDarkMode() {
+	document.querySelector("body").classList.remove("body-dark");
+
+	document.querySelector(".bg-landing").classList.remove("landing-page-dark")
+
+	var card = document.getElementsByClassName("sport-card");
+	for(var i = 0; i < card.length; i++) {
+		card[i].classList.remove("sport-card-dark");
+	}
+
+	var introCard = document.getElementsByClassName("sport-intro-card");
+	for(var i = 0; i < introCard.length; i++) {
+		introCard[i].classList.remove("sport-intro-card-dark");
+	}
+}
 
 
 
